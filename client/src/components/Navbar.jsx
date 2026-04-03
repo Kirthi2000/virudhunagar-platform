@@ -63,9 +63,9 @@ export default function Navbar() {
             <>
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-xs font-bold">
-                  {user.name.charAt(0).toUpperCase()}
+                  {user.name?.charAt(0).toUpperCase()}
                 </div>
-                <span className="text-xs font-medium text-slate-700">{user.name.split(' ')[0]}</span>
+                <span className="text-xs font-medium text-slate-700">{user.name?.split(' ')[0]}</span>
               </div>
               <Link to="/dashboard" className="px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-slate-700 transition-colors">
                 Dashboard
@@ -123,7 +123,7 @@ export default function Navbar() {
               <div className="space-y-2">
                 <div className="flex items-center gap-3 px-4 py-2">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-sm font-bold">
-                    {user.name.charAt(0).toUpperCase()}
+                    {user.name?.charAt(0).toUpperCase()}
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">{user.name}</p>
