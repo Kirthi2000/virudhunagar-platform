@@ -10,7 +10,7 @@ export default function Login() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const redirectTo = location.state?.from;
+  const redirectTo = typeof location.state?.from === 'string' ? location.state.from : null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
